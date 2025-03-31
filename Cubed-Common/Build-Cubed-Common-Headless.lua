@@ -9,14 +9,14 @@ project "Cubed-Common-Headless"
 
    includedirs
    {
-      "../Walnut/vendor/glm",
+      path.getabsolute("../Walnut/vendor/glm"),
 
-      "../Walnut/Walnut/Source",
-      "../Walnut-Networking/Source",
+      path.getabsolute("../Walnut/Walnut/Source"),
+      path.getabsolute("../Walnut-Networking/Source"),
 
-      "../Walnut/vendor/spdlog/include",
+      path.getabsolute("../Walnut/vendor/spdlog/include"),
 
-      "../vendor/GameNetworkingSockets/include"
+      path.getabsolute("../vendor/GameNetworkingSockets/include")
    }
 
    links

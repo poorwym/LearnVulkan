@@ -1,5 +1,5 @@
 project "Cubed-Client"
-   kind "ConsoleApp"
+   kind "WindowedApp"
    language "C++"
    cppdialect "C++20"
    targetdir "bin/%{cfg.buildcfg}"
@@ -9,20 +9,20 @@ project "Cubed-Client"
 
    includedirs
    {
-      "../Cubed-Common/Source",
+      path.getabsolute("../Cubed-Common/Source"),
 
-      "../Walnut/vendor/imgui",
-      "../Walnut/vendor/glfw/include",
+      path.getabsolute("../Walnut/vendor/imgui"),
+      path.getabsolute("../Walnut/vendor/glfw/include"),
 
-      "../Walnut/Walnut/Source",
-      "../Walnut/Walnut/Platform/GUI",
+      path.getabsolute("../Walnut/Walnut/Source"),
+      path.getabsolute("../Walnut/Walnut/Platform/GUI"),
 
       "%{IncludeDir.VulkanSDK}",
       "%{IncludeDir.glm}",
 
       -- Walnut-Networking
-      "../Walnut/Walnut-Modules/Walnut-Networking/Source",
-      "../Walnut/Walnut-Modules/Walnut-Networking/vendor/GameNetworkingSockets/include"
+      path.getabsolute("../Walnut/Walnut-Modules/Walnut-Networking/Source"),
+      path.getabsolute("../Walnut/Walnut-Modules/Walnut-Networking/vendor/GameNetworkingSockets/include")
    }
 
     links

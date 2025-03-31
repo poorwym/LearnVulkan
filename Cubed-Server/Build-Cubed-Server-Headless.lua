@@ -9,19 +9,19 @@ project "Cubed-Server"
 
    includedirs
    {
-      "../Cubed-Common/Source",
+      path.getabsolute("../Cubed-Common/Source"),
 
-      "../Walnut/vendor/glm",
+      path.getabsolute("../Walnut/vendor/glm"),
 
-      "../Walnut/Walnut/Source",
-      "../Walnut/Walnut/Platform/Headless",
+      path.getabsolute("../Walnut/Walnut/Source"),
+      path.getabsolute("../Walnut/Walnut/Platform/Headless"),
 
-      "../Walnut/vendor/spdlog/include",
-      "../Walnut/vendor/yaml-cpp/include",
+      path.getabsolute("../Walnut/vendor/spdlog/include"),
+      path.getabsolute("../Walnut/vendor/yaml-cpp/include"),
 
       -- Walnut-Networking
-      "../Walnut/Walnut-Modules/Walnut-Networking/Source",
-      "../Walnut/Walnut-Modules/Walnut-Networking/vendor/GameNetworkingSockets/include"
+      path.getabsolute("../Walnut/Walnut-Modules/Walnut-Networking/Source"),
+      path.getabsolute("../Walnut/Walnut-Modules/Walnut-Networking/vendor/GameNetworkingSockets/include")
 
    }
 

@@ -3,10 +3,15 @@
 
 #include "Walnut/Image.h"
 #include "Walnut/UI/UI.h"
+#include <iostream>
 
 class ExampleLayer : public Walnut::Layer
 {
 public:
+	virtual void OnAttach() override {
+		std::cout << "Layer attached successfully" << std::endl;
+	}
+
 	virtual void OnUIRender() override
 	{
 		ImGui::Begin("Hello");
@@ -58,13 +63,17 @@ private:
 
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
+	std::cout << "Creating application..." << std::endl;
 	Walnut::ApplicationSpecification spec;
 	spec.Name = "Walnut Example";
 	spec.CustomTitlebar = true;
 
 	Walnut::Application* app = new Walnut::Application(spec);
+	std::cout << "Application created" << std::endl;
+	
 	std::shared_ptr<ExampleLayer> exampleLayer = std::make_shared<ExampleLayer>();
 	app->PushLayer(exampleLayer);
+	std::cout << "Layer pushed to application" << std::endl;
 	app->SetMenubarCallback([app, exampleLayer]()
 	{
 		if (ImGui::BeginMenu("File"))

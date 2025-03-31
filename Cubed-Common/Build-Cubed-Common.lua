@@ -9,17 +9,17 @@ project "Cubed-Common"
 
    includedirs
    {
-      "../Walnut/vendor/imgui",
-      "../Walnut/vendor/glfw/include",
-      "../Walnut/vendor/glm",
+      path.getabsolute("../Walnut/vendor/imgui"),
+      path.getabsolute("../Walnut/vendor/glfw/include"),
+      path.getabsolute("../Walnut/vendor/glm"),
 
-      "../Walnut/Walnut/Source",
-      "../Walnut-Networking/Source",
+      path.getabsolute("../Walnut/Walnut/Source"),
+      path.getabsolute("../Walnut-Networking/Source"),
 
       "%{IncludeDir.VulkanSDK}",
-      "../Walnut/vendor/spdlog/include",
+      path.getabsolute("../Walnut/vendor/spdlog/include"),
 
-      "../Walnut-Networking/vendor/GameNetworkingSockets/include"
+      path.getabsolute("../Walnut-Networking/vendor/GameNetworkingSockets/include")
    }
 
    links
