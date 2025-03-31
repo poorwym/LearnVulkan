@@ -15,6 +15,6 @@ WalnutNetworkingBinDir = "Walnut/Walnut-Modules/Walnut-Networking/vendor/GameNet
 include "Walnut/Build-Walnut-External.lua"
 
 group "App"
-    include "CUbed-Common/Build-Cubed-Common.lua"
+    include "Cubed-Common/Build-Cubed-Common.lua"
     include "Cubed-Client/Build-Cubed-Client.lua"
 group ""

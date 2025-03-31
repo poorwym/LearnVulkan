@@ -27,7 +27,7 @@ project "Cubed-Client"
 
     links
     {
-        "App-Common",
+        "Cubed-Common",
         "Walnut"
     }
 

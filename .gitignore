@@ -28,6 +28,7 @@ build/
 *.xcworkspace.zip.part
 *.xcworkspace.zip.part.1
 *.xcworkspace.zip.part.2
+
 *.pbxproj
 *.pbxproj.zip
 *.pbxproj.zip.part
@@ -42,3 +43,7 @@ xcuserdata/
 *.xcuserdata.zip.part
 *.xcuserdata.zip.part.1
 *.xcuserdata.zip.part.2
+
+.vs/
+bin-int/
+bin/
