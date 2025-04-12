@@ -1,5 +1,5 @@
-project "Cubed-Client"
-   kind "WindowedApp"
+﻿project "Cubed-Client"
+   kind "ConsoleApp"
    language "C++"
    cppdialect "C++20"
    targetdir "bin/%{cfg.buildcfg}"
@@ -13,6 +13,7 @@ project "Cubed-Client"
 
       path.getabsolute("../Walnut/vendor/imgui"),
       path.getabsolute("../Walnut/vendor/glfw/include"),
+      path.getabsolute("../Walnut/vendor/spdlog/include"),
 
       path.getabsolute("../Walnut/Walnut/Source"),
       path.getabsolute("../Walnut/Walnut/Platform/GUI"),

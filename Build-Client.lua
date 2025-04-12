@@ -1,8 +1,10 @@
--- premake5.lua
+﻿-- premake5.lua
 workspace "Cubed-Client"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
    startproject "Cubed-Client"
+
+   defines { "IMGUI_DEFINE_MATH_OPERATORS"}
 
    -- Workspace-wide build options for MSVC
    filter "system:windows"
